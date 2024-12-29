@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        /*全局适配器{外边距：0； 内边距：0}*/
+        *{          margin: 0px; padding: 0px}
+        /*标签适配器{宽度   高度        居中显示}*/
+        body{width: 1024px; height: 100%; margin: 0 auto}
+
+        /*“title图片”*/
+        /*ID适配器{宽度        高度            居中显示     内边距：上   右 下   左*/
+        #title{width: 220px; height: 80px; margin: 0 auto; padding: 100px 0 50px 0}
+
+        /*输入框整体样式*/
+        /*nav适配{    宽       高           居中显示        背景颜色：      白色}*/
+        #nav{width: 430px; height: 35px; margin: 0 auto; background-color: white; }
+        /*输入框*/
+        /*nav适配下的input标签{宽     高          边框：0      浮动：左             动画持续时间：0.4s}*/
+        #nav input{width: 300px; height: 35px; border: 0px; float: left; transition:All 0.4s ease-in-out;}
+        /*nav适配下的input标签：滑动效果{放大1.5倍}*/
+        #nav input:hover{transform: scale(1.5)}
+        /*nav适配下的img标签{宽     高      浮动：左    外边距：上下 左右           动画持续时间：0.4s}*/
+        #nav img{width: 20px;height: 20px; float: left; margin: 7px 5px; transition:All 0.4s ease-in-out;}
+        /*nav适配下的img标签：滑动效果{放大1.2倍）}*/
+        #nav img:hover{transform: scale(1.2)}
+        /*“进入果蔬商城按钮”{宽    高           颜色              背景颜色：浅蓝色        浮动：右         左右居中             上下居中             动画持续时间：0.4s}*/
+        #baidu{width: 100px; height: 35px; color: white; background-color: dodgerblue; float: right; text-align: center; line-height: 35px; transition:All 0.4s ease-in-out;}
+        /*“进入果蔬商城按钮”滑动效果{放大2倍    颜色}*/
+        #baidu:hover{transform: scale(2); color: red}
+
+        /*十张图片放在一个div中*/
+        /*div的适配{ 宽            定位：相对    距离左边的宽度 距离上边的宽度}*/
+        #main{ width: 780px; position: relative; left: 130px; top: 50px}
+
+        /*要实现的图片滑动小效果*/
+        /*class适配器{动画持续时间：1s}*/
+        .img1{ transition:All 1s ease-in-out;}
+        /*class适配器滑动效果{旋转（360度）}        顺时针方向*/
+        .img1:hover{transform: rotate(360deg)}
+        /*class适配器{动画持续时间：1s}*/
+        .img2{ transition:All 1s ease-in-out;}
+        /*class适配器滑动效果{旋转（360度）}        逆时针方向*/
+        .img2:hover{transform: rotate(-360deg)}
+        /*class适配器{动画持续时间：1s}*/
+        .img3{ transition:All 1s ease-in-out;}
+        /*class适配器滑动效果{放大1.5倍}*/
+        .img3:hover{transform: scale(1.5)}
+        /*class适配器{动画持续时间：1s}*/
+        .img4{ transition:All 1s ease-in-out;}
+        /*class适配器滑动效果{倾斜50度}             顺时针方向*/
+        .img4:hover{transform: skew(-50deg)}
+    </style>
+</head>
+
+<!--/*背景图片*/-->
+<body background="img/beijing.jpg">
+    <!--/*“title”图片*/-->
+    <div id="title"><img src="img/title.jpg" /></div>
+    <div id="nav">
+        <div id="float">
+            <!--/*文本框*/-->
+            <input type="text">
+            <!--/*苹果图片*/-->
+            <img src="img/pingguo.jpg">
+        </div>
+        <!--/*进入果蔬商城按钮*/-->
+        <div class="float" id="baidu" >进入果蔬商城</div>
+    </div>
+    <!--/*十张小图片*/-->
+    <div id="main">
+        <!--/*第一行五张图片*/-->
+        <div>
+            <img src="img/img1-1.jpg" class="img1" />
+            <img src="img/img1-2.jpg" />
+            <img src="img/img1-3.jpg" />
+            <img src="img/img1-4.jpg" />
+            <img src="img/img1-5.jpg" />
+        </div>
+        <!--/*第二行五张图片*/-->
+        <div>
+            <img src="img/img2-1.jpg" class="img2" />
+            <img src="img/img2-2.jpg" />
+            <img src="img/img2-3.jpg" class="img3" />
+            <img src="img/img2-4.jpg" class="img4" />
+            <img src="img/img2-5.jpg" />
+        </div>
+    </div>
+</body>
+</html>
